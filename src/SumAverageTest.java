@@ -1,39 +1,31 @@
-import static org.testng.Assert.assertEquals;
-
-import java.util.stream.IntStream;
-
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import java.util.stream.IntStream;
+
+import static org.testng.Assert.assertEquals;
+
 public class SumAverageTest {
 
-  /**
-   * Test data for lower and ipper bounds.
-   *
-   * @return test data array
-   */
   @DataProvider(name = "Sum")
   public static Object[][] sum() {
     return new Object[][]{
-        {1, 100, 5050},
-        {-100, 100, 0},
-        {1, 1, 1}
-        // TODO add 2 more test data here
+            {1, 100, 5050},
+            {-100, 100, 0},
+            {1, 1, 1},
+            {50, 60, 605},
+            {1, 10, 55}
     };
   }
 
-  /**
-   * Test data for lower and ipper bounds.
-   *
-   * @return test data array
-   */
   @DataProvider(name = "Average")
   public static Object[][] average() {
     return new Object[][]{
-        {1, 100, 50.5},
-        {-100, 100, 0.0},
-        {1, 1, 1.0}
-        // TODO add 2 more test data here
+            {1, 100, 50.5},
+            {-100, 100, 0.0},
+            {1, 1, 1.0},
+            {333, 777, 555.0},
+            {-40, -20, -30.0}
     };
   }
 
